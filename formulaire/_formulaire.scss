@@ -1,0 +1,192 @@
+/**
+* _formulaire.scss 1.0 juin 2021 by Alexandre CHARLIER  
+*
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_6_03062021
+* GitHub Pages :https://alexandre34000.github.io/AlexandreCharlier_6_03062021/.
+* Theme Name : fisheye .
+* Description : style pour le formulaire de contact.
+* Date: juin 2021. 
+*/
+
+#container-main__formulaire {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+ overflow: auto;
+ @include desktop {
+  align-items: center;
+ }
+}
+
+.content-main__formulaire {
+  max-width: 668px;
+  animation-name: modalopen;
+  animation-duration: 0.8s;
+  background-color: $secondary-background-button;
+  border-radius: 5px;
+}
+.main-formulaire {
+  position: relative;
+  margin: 20px 20px 75px 17px;
+  @include desktop {
+    margin: 15px 35px 38px 35px;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  width: 19px;
+  height: 19px;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 1;
+  @include desktop {
+    top: 10px;
+    width: 55px;
+    height: 55px;
+  }
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 9px;
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: $color-white;
+  @include desktop {
+    left: 21px;
+    height: 55px;
+    width: 7px;
+  }
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.modal-body {
+  position: relative;
+}
+
+.modal-title,
+.modal-name {
+  font-size: 36px;
+  font-weight: 400;
+  color: $secondary-font-backDark;
+  @include desktop {
+    font-size: 64px;
+  }
+}
+
+#reserve {
+  margin-top: 25px;
+  @include desktop {
+    margin-top: 19px;
+  }
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-top: 14px;
+  font-size: 24px;
+  font-weight: 400;
+  color: $color-grey;
+  @include desktop {
+    margin: 0;
+    font-size: 36px;
+  }
+}
+
+.text-control {
+  outline: none;
+  width: 100%;
+  height: 52px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 20px;
+  @include desktop {
+    margin: 0;
+    height: 68px;
+    font-size: 36px;
+  }
+}
+
+.lbl-message {
+  margin: 14px 0 14px 0;
+  @include desktop {
+    margin: 10px 0 5px 0;
+  }
+}
+
+#message {
+  height: 170px;
+}
+
+.formData[data-error="true"] .text-control {
+  border: 2px solid #e54858;
+}
+
+.formData[data-error]::after {
+  content: attr(data-error-message);
+  //height: 20px;
+  font-size: 15px;
+  color: blue;
+  display: none;
+   margin-top: 2px;
+  /*margin-bottom: 2px; */
+  text-align: left;
+  transition: 0.3s;
+}
+.formData[data-error="true"]::after {
+  display: block;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#container-msg,
+#container-spinner {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#content-msg {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+#content-msg__serveur {
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+}
+
+#btnclose {
+  display: flex;
+  justify-content: center;
+}

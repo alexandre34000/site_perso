@@ -1,0 +1,26 @@
+/**
+* _main-photographies.scss 1.0 juin 2021 by Alexandre CHARLIER  
+*
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_6_03062021
+* GitHub Pages :https://alexandre34000.github.io/AlexandreCharlier_6_03062021/.
+* Theme Name : fisheye .
+* Description : import scss style for page photographe.html.
+* Date: juin 2021. 
+*/
+
+
+
+
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./bases/bases";
+@import "./bases/fonts";
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/cards-photo";
+@import "./layouts/formulaire";
+@import "./layouts/spinner";
+@import "./components/component-tags";
+@import "./components/component-button";
+@import "./pages/page-photographies";

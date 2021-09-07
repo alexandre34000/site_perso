@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="title" content=" " />
+  <meta name="keywords" content="" />
+  <meta name="description" content=" " />
+  <meta name="author" content="Alexandre CHARLIER " />
+  <title>Fisheye</title>
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.3/css/all.min.css" /> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" />
+  <link rel="icon" type="image/svg+xml" href="./dist/pictures/logo/Group.svg" sizes="150x38" />
+  <link rel="stylesheet" href="./dist/css/photographies-style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="container-header">
+      <div class="content-header">
+        <div class="header-logo">
+          <nav class="header-logo_nav" aria-label="Retour page home">
+            <a href="./index.html">
+              <img class=" logo-nav_img" src="./dist/pictures/logo/Group.png" alt=logo sizes="150x38">
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="container-main__header">
+      <div class="content-main__header">
+        <div id="content-main__header-left">
+          <h1 id="header-left__name">
+          </h1>
+          <div class=" header-left__adress"><span id="header-left__city"></span>
+            <span id="header-left__country"></span>
+          </div>
+          <span id="header-left__describ"></span>
+        </div>
+        <div id="content-main__header-center">
+          <button class="btnModal" onclick="openModal()">Contactez-moi</button>
+        </div>
+        <div id="content-main__header-right">
+          <img id="header-right__logo" alt="" sizes="100x100">
+        </div>
+        <div id="content-main__header-bottom">
+        </div>
+      </div>
+    </section>
+    <section class="container-main__center">
+      <div id="content-main__center"></div>
+    </section>
+    <section id="container-main__formulaire">
+      <div class="content-main__formulaire">
+        <div class="main-formulaire">
+          <span class="close"></span>
+          <div class="modal-body">
+            <h1 class="modal-title">Contactez-moi</h1>
+            <span class="modal-name"></span>
+            <form name="reserve" id="reserve" onsubmit="return validate()">
+              <div class="formData">
+                <label for="first">Prénom</label>
+                <input class="text-control" type="text" id="first" name="first" autocomplete="given-name" />
+              </div>
+              <div class="formData">
+                <label for="last">Nom</label>
+                <input class="text-control" type="text" id="last" name="last" autocomplete="family-name" />
+              </div>
+              <div class="formData">
+                <label for="email">Email</label>
+                <input class="text-control" type="email" id="email" name="email" autocomplete="email" />
+              </div>
+              <div class="formData">
+                <label class="lbl-message" for="message">Votre message</label>
+                <textarea class="text-control" id="message" name="message" rows="4" cols="20"
+                  maxlength="100"></textarea>
+              </div>
+              <input class="btn cmpt-btn__dark" name="btnSubmit" type="submit" id="submit" value="Envoyer" />
+            </form>
+            <div id="container-spinner">
+              <div class="loadingSpinnerBox">
+                <div class="lds-ring">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="container-msg" data-modal>
+            <div id="content-msg">
+              <p id="content-msg__serveur">
+              </p>
+            </div>
+            <div id="btnclose">
+              <input class="btn cmpt-btn__dark" name="btnSubmit" type="submit" value="Close" onclick="closeModal()" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="footer-container">
+      <div class="footer-content">
+        <h2 class="footer-title">
+          <img class="footer-title__logo" src="./dist/pictures/logo/group.png" srcset="./dist/pictures/logo/group.svg"
+            alt="fisheye" width="150" height="50" title="Fisheye" />
+        </h2>
+        <ul class="footer-list">
+          <li class="footer-list__item "><a class="item-nav" href="#">Proposer
+              des photographies</a></li>
+          <li class="footer-list__item "><a class="item-nav" href="#">Devenir
+              partenaire</a></li>
+          <li class="footer-list__item item3"><a class="item-nav" href="#">Mentions légales</a></li>
+          <li class="footer-list__item item4"><a class="item-nav" href="mailto:alexandre.charlier@free.fr">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+  <script type="module" src="photographe.js"></script>
+  <script src="./scripts/formulaire.js"></script>
+</body>
+
+</html>

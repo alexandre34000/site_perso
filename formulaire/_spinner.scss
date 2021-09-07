@@ -1,0 +1,53 @@
+/**
+* _spinner.scss 1.0 juin 2021 by Alexandre CHARLIER  
+*
+* Author : Alexandre CHARLIER.
+* GitHub : https://github.com/alexandre34000/AlexandreCharlier_6_03062021
+* GitHub Pages :https://alexandre34000.github.io/AlexandreCharlier_6_03062021/.
+* Theme Name : fisheye .
+* Description : style pour le spinner d'attente.
+* Date: juin 2021. 
+*/
+.loadingSpinnerBox {
+  
+  width: 100%;
+  height: 100%;
+}
+
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+    border: 15px solid white;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color:$secondary-font-backGrey transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

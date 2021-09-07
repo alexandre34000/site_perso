@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="title" content=" " />
+  <meta name="keywords" content="" />
+  <meta name="description" content=" " />
+  <meta name="author" content="Alexandre CHARLIER " />
+  <title>Fisheye</title>
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.3/css/all.min.css" /> -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" />
+  <link rel="icon" type="image/svg+xml" href="./dist/pictures/logo/Group.svg" sizes="150x38" />
+  <link rel="stylesheet" href="./dist/css/test-style.css" />
+</head>
+
+<body>
+  <main>
+    <section id="container-main__formulaire">
+      <div class="content-main__formulaire">
+        <div class="main-formulaire">
+          <span class="close"></span>
+          <div class="modal-body">
+            <h1 class="modal-title">Contactez-moi</h1>
+            <span class="modal-name">Mimi Keel</span>
+            <form name="reserve" id="reserve" action="./test.html" method="POST" onsubmit="return validate()">
+              <div class="formData">
+                <label for="first">Prénom</label>
+                <input class="text-control" type="text" id="first" name="first" autocomplete="given-name" />
+              </div>
+              <div class="formData">
+                <label for="last">Nom</label>
+                <input class="text-control" type="text" id="last" name="last" autocomplete="family-name" />
+              </div>
+              <div class="formData">
+                <label for="email">Email</label>
+                <input class="text-control" type="email" id="email" name="email" autocomplete="email" />
+              </div>
+              <div class="formData">
+                <label class="lbl-message" for="message">Votre message</label>
+                <textarea class="text-control" id="message" name="message" rows="4" cols="20"
+                  maxlength="100"></textarea>
+              </div>
+              <input class="btn cmpt-btn__dark" name="btnSubmit" type="submit" id="submit" value="Envoyer" />
+            </form>
+            <div id="container-spinner">
+              <div class="loadingSpinnerBox">
+                <div class="lds-ring">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="container-msg" data-modal>
+            <div id="content-msg">
+              <p id="content-msg__serveur">
+              </p>
+            </div>
+            <div id="btnclose">
+              <input class="btn cmpt-btn__dark" name="btnSubmit" type="submit" value="Close" onclick="closeModal()" />
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./test.js"></script>
+</body>
+
+</html>

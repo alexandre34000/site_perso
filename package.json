@@ -1,0 +1,20 @@
+{
+  "name": "alex",
+  "version": "1.0.0",
+  "description": "Site personnel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch ./sass/main-home.scss:./dist/css/home-style.css  --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandre34000/site_perso.git"
+  },
+  "author": "Alexandre CHARLIER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandre34000/site_perso/issues"
+  },
+  "homepage": "https://github.com/alexandre34000/site_perso#readme"
+}
