@@ -8,4 +8,64 @@
 * Description : StyleSheet de la page home.
 * Date: avril 2021. 
 */
+body {
+   // background-color :green;
+}
 
+.main-container{
+    width : 100%;
+    height: 1000px;
+    background-color:aqua;
+}
+.main-header{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 100%;
+    height : 500px;
+    opacity : 1;
+    background-image:url(../pictures/arch.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.main-header__title{
+    width: auto;
+    color: white;
+    align-self: center;
+}
+
+.main-header__text{
+    width:50%;
+    color: white;
+    align-self: center;
+}
+.main-header__btn{
+    width:80px;
+    color: white;
+    align-self: center;
+}
+.main-center{
+    width:100%;
+    padding :0 50px;
+background-color:$color-grey-light;
+}
+.main-center__header{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    padding-top:50px;
+}
+.border{
+    width:30%;
+    height:6px;
+    border-bottom:2px solid white;
+}
+.main-center__center{
+    width:100%;
+    height :200px;
+}
+.main-bottom{
+
+}
