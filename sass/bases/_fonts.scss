@@ -19,12 +19,14 @@ h4,
 p,
 span,
 a {
-  font-family: $font-texte, sans-serif;
+ // font-family: $font-texte, sans-serif;
 }
 
-h1,
+h1{
+  font-size: $font-exbig;
+}
 h2 {
-  font-size: $font-exlg;
+  font-size: $font-mdbig;
   font-weight: 800;
 }
 

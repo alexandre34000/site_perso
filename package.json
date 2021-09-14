@@ -1,11 +1,14 @@
 {
+  "dependencies": {
+    "three": "^0.132.2"
+  },
   "name": "alex",
   "version": "1.0.0",
   "description": "Site personnel",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sass --watch ./sass/main-home.scss:./dist/css/home-style.css  --style compressed"
+    "start": "sass --watch ./sass/main-home.scss:./dist/css/home-style.css ./sass/main-commencer.scss:./dist/css/commencer-style.css ./sass/main-tour-du-monde.scss:./dist/css/tourdumonde-style.css  --style compressed"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,37 @@
+div{
+
+}
+
+.main-container{
+    width : 100%;
+    height: auto;
+ 
+}
+.main-header{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 100%;
+    height : 700px;
+  //  background-image:url(../pictures/dublin-2344423_1920.jpg);
+    @include parallax;
+}
+.header-template{
+    color: white;
+    align-self: center;
+}
+.main-header__title{
+    width: auto;
+    font-family: Pinyon Script;
+    font-size: 35px;
+    @extend .header-template;
+}
+
+.main-header__text{
+    width:50%;
+    @extend .header-template;
+}
+.main-header__btn{
+    width:80px;
+    @extend .header-template;
+}

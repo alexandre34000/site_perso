@@ -14,40 +14,38 @@ body {
 
 .main-container{
     width : 100%;
-    height: 1000px;
-    background-color:aqua;
+    height: auto;
+    scroll-behavior: smooth;
+ 
 }
 .main-header{
     display:flex;
     flex-direction: column;
     justify-content:center;
     width: 100%;
-    height : 500px;
-    opacity : 1;
+    height : 700px;
     background-image:url(../pictures/arch.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    @include parallax;
+}
+.header-template{
+    color: white;
+    align-self: center;
 }
 .main-header__title{
     width: auto;
-    color: white;
-    align-self: center;
+    font-style: italic;
+    @extend .header-template;
 }
 
 .main-header__text{
     width:50%;
-    color: white;
-    align-self: center;
+    @extend .header-template;
 }
-.main-header__btn{
-    width:80px;
-    color: white;
-    align-self: center;
-}
+
+
 .main-center{
     width:100%;
+    height :auto;
     padding :0 50px;
 background-color:$color-grey-light;
 }
@@ -55,17 +53,38 @@ background-color:$color-grey-light;
     display:flex;
     flex-direction: row;
     justify-content:center;
+    align-items:center;
     padding-top:50px;
 }
-.border{
+.main-center__header-border{
     width:30%;
-    height:6px;
-    border-bottom:2px solid white;
+    height:2px;
+    border-bottom:1px solid black;
+}
+.main-center__header-title{
+    padding:0 20px;
+    font-style: italic;
+    font-size:$font-mdbig;
+    font-family:$font-oblique;
 }
 .main-center__center{
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction:row;
+   justify-content:space-between;
     width:100%;
-    height :200px;
+    height :auto;
+    padding:50px 0;
 }
 .main-bottom{
+    
+    padding-top:70px;
+    height: 450px;
+    background-image:url(../pictures/museum.jpg);
+    @include parallax;
 
+}
+.main-bottom-bottom{
+    height:300px;
+    background-color:$color-grey-dark-dark;
 }

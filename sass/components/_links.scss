@@ -1,0 +1,32 @@
+
+/* .header-template{
+    color: white;
+    align-self: center;
+    cursor: pointer;
+   
+} */
+.link-header{
+    color: white;
+}
+.main-header__link{
+    width:80px;
+    border : 1px solid white;
+    text-align: center;
+    color: white;
+    align-self: center;
+    cursor: pointer;
+  //  @extend .header-template;
+}
+
+.link-cards{
+    width:90px;
+    height:30px;
+    background-color: transparent;
+    text-align: center;
+    line-height :30px;
+    color:white;
+    border: 1px solid $color-white;
+    border-radius:3px;
+    cursor: pointer;
+}
+
