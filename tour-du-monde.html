@@ -6,42 +6,48 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="keywords" content=" création, site, internet, developpement, vitrine, commerce, personnel" />
-    <meta name="description" content="Site de promotion pour la création de site internet " />
+    <meta name="description" content="Tour du monde des sites internet " />
     <meta name="author" content="Alexandre CHARLIER " />
-    <title>Creation de site internet</title>
+    <title>Tour du monde des sites internet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&family=Pinyon Script&family=Miss Fajardose&display=swap" />
     <link rel="icon" type="image/svg+xml" href="./dist/pictures/logo/" sizes="392x68" />
     <link rel="stylesheet" href="./dist/css/tourdumonde-style.css" />
 </head>
-
 <body>
-
+    <!--  <script type="module" src="./script//globe.js"></script>  -->
     <header>
-
         <div class="container-entete">
             <div class="content-entete">
-                <div class="entete-left">
-
-                </div>
+                <nav class="entete-left" aria-label="naviguer vers d'autres sections du site">
+                    <ul class="entete-left__list">
+                        <li><a class="link-header" href="#decouvrir">Découvrir</a></li>
+                        <li><a class="link-header" href="#">loreum</a></li>
+                        <li><a class="link-header" href="#">loreum</a></li>
+                    </ul>
+                </nav>
                 <div class="entete-center">
-                    <p class="entete-center__logo">A.C</p>
+                    <h1 class="entete-center__logo"><a href="./index.html" class="entete-center__logo">AC</a></h1>
                 </div>
-                <div class="entete-right">
-
-                </div>
-
+                <nav class="entete-right" aria-label="naviguer vers d'autres pages">
+                    <ul class="entete-right__list">
+                        <li><a class="link-header" href="#">contact</a></li>
+                        <li><a class="link-header" href="#">enveloppe</a></li>
+                    </ul>
+                </nav>
             </div>
-
         </div>
     </header>
     <main>
         <div class="main-container">
             <div class="main-header">
-                <h1 class="main-header__title">Tour du monde </h1>
-                <p class="main-header__text">Site awards et differents sites d'animation ou avec des prix'</p>
-               <!--  <button class="main-header__btn">Click</button> -->
+                <div class="divcanvas">
+                <canvas id="canvasmain" width="300" height="150"></canvas>
+            </div>
+              <!--   <h1 class="main-header__title">Tour du monde </h1>
+                <p class="main-header__text">Site awards et differents sites d'animation ou avec des prix'</p> -->
+                <!--  <button class="main-header__btn">Click</button> -->
             </div>
             <div class="main-center">
                 <div class="main-center__header">
@@ -50,18 +56,14 @@
                     <div class="main-center__header-border"></div>
                 </div>
                 <div class="main-center__center">
-                    
                 </div>
-
             </div>
             <div class="main-bottom">
                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
             </div>
             <div class="main-bottom-bottom">
-
             </div>
         </div>
-
     </main>
     <footer>
         <section class="footer-container">
@@ -76,7 +78,8 @@
             </div>
         </section>
     </footer>
-  <!--   <script type="module" src="index.js"></script> -->
+   <!--  <script type="module" src="./script//globe.js"></script> -->
+      <script type="module" src="tourdumonde.js"></script>
 </body>
 
 </html>

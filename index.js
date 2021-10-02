@@ -1,38 +1,34 @@
 
 import {init, animate} from './script/map-monde.js'
-
+import {clickHandler, isActive} from './script/scroll.js'
 const links = document.querySelectorAll(".content-entete ul a");
+const scrollTop = document.querySelector("#scroll-top");
 
 /**
-* add Event listener
-* @param {} itemName 
-* @returns list of String 
+* add Event listener on domElements
 */
 const addListener = () =>{
   for (const link of links) {
     link.addEventListener("click", clickHandler);
   }
+  scrollTop.addEventListener("click", clickHandler);
 }
 
-/**
- * Used for scroll to anchor in smooth mode
- * @param {event} e 
- */
-function clickHandler(e) {
-  e.preventDefault();
-  const href = this.getAttribute("href");
-  const offsetTop = document.querySelector(href).offsetTop;
-
-  scroll({
-    top: offsetTop,
-    behavior: "smooth"
-  });
-}
 
 addListener();
-init();
+init("#canvas", 25);
 animate();
 
+let oldValue =0;
+window.addEventListener('scroll', function(e){
+var newValue = window.pageYOffset || document.documentElement.scrollTop;
+  if(newValue > oldValue){
+    isActive(true)
+} else if(newValue < oldValue){
+    isActive(false)
+}
+oldValue = newValue <= 0 ? 0 : newValue;
+}, false);
 
 
 /**

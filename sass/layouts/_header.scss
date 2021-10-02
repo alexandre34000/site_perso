@@ -1,13 +1,14 @@
 /**
-* header.scss 1.0 avril 2021 by Alexandre CHARLIER  
+* header.scss 1.0 septembre 2021 by Alexandre CHARLIER  
 *
 * Author : Alexandre CHARLIER.
 * GitHub : https://github.com/alexandre34000/AlexandreCharlier_3_02042021.
 * GitHub Pages : https://alexandre34000.github.io/AlexandreCharlier_3_02042021/.
-* Theme Name : ohmyfood .
+* Theme Name : site personnel.
 * Description : Stylesheet du header.
-* Date: avril 2021. 
+* Date: Août 2021. 
 */
+
 .container-entete {
   z-index: 5;
   position: fixed;
@@ -22,16 +23,21 @@
   height: 95%;
   border-bottom: 1px solid $color-white;
 }
-.entete-left {
+
+%entete {
+  display: flex;
+  align-items: center;
   width: 42%;
   height: 100%;
-  padding-left :50px;
-  display:flex;
-  align-items: center;
+}
+
+.entete-left {
+  @extend %entete;
+  justify-content: flex-start;
   &__list {
     & > li {
-   display:inline;
-   padding : 0 30px;
+      display: inline;
+      padding: 0 30px;
     }
   }
 }
@@ -42,20 +48,23 @@
   padding: 10px 10px;
   border-left: 1px solid $color-white;
   border-right: 1px solid $color-white;
- display:flex;
- justify-content: center;
- align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__logo {
     font-size: $font-mdbig;
-    //font-family: Aviator;
     font-family: $font-logo;
     color: $color-white;
-   
   }
 }
 
 .entete-right {
-  width: 42%;
-  height: 100%;
+  @extend %entete;
+  justify-content: flex-end;
+  & > ul {
+    & > li {
+      display: inline;
+      padding: 0 30px;
+    }
+  }
 }
