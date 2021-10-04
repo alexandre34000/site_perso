@@ -1,10 +1,12 @@
 import * as THREE from 'https://cdn.skypack.dev/pin/three@v0.132.2-1edwuDlviJO0abBvWgKd/mode=imports,min/optimized/three.js'
+//import { DoubleSide } from 'three';
 
 var scene, renderer;
 var camera;
 var earthMesh;
 var containerEarth;
 var cloudMesh;
+var dotMesh
 
 export function init(getId, posCamera) {
 
@@ -41,25 +43,40 @@ export function init(getId, posCamera) {
   light.shadow.mapSize.width = 1024
   light.shadow.mapSize.height = 1024
 
-
-  containerEarth = new THREE.Object3D();
-
-
-  scene.add(containerEarth);
-
   earthMesh = createEarth();
   earthMesh.receiveShadow = true
   earthMesh.castShadow = true
   earthMesh.rotation.x += 0.5;
-  containerEarth.add(earthMesh);
+  scene.add(earthMesh)
 
-  /* cloudMesh = createCloud();
-  cloudMesh.rotation.x +=0.5
-containerEarth.add(cloudMesh) */
+  var dotMeshParis = addObject();
+  var dotMeshNewYork = addObject();
+  var dotMeshShanghai = addObject();
+  let coordonate = {
+    paris: {
+      lat: 48.856614,
+      long: 2.3522219
+    },
+    newyork: {
+      lat: 40.712784,
+      long: -74.005941
+    },
+    shanghai:{
+      lat: 31.224361,
+      long : 121.469170
+    }
+  }
+  let cartesianParis = convertLatLongToCartesian(coordonate.paris);
+  dotMeshParis.position.set(cartesianParis.x, cartesianParis.y, cartesianParis.z);
+  earthMesh.add(dotMeshParis);
 
-  /* let sphereMesh = createSphere();
-  sphereMesh.rotation.x += 0.5
-  containerEarth.add(sphereMesh) */
+  let cartesianNewYork = convertLatLongToCartesian(coordonate.newyork);
+  dotMeshNewYork.position.set(cartesianNewYork.x, cartesianNewYork.y, cartesianNewYork.z);
+  earthMesh.add(dotMeshNewYork);
+
+  let cartesianShanghai = convertLatLongToCartesian(coordonate.shanghai);
+  dotMeshShanghai.position.set(cartesianShanghai.x, cartesianShanghai.y, cartesianShanghai.z);
+  earthMesh.add(dotMeshShanghai);
 
 }
 
@@ -72,10 +89,9 @@ function createEarth() {
     bumpScale: 1,
     specularMap: loader.load('./dist/pictures/mapmonde/earthspec1k.jpg'),
     specular: new THREE.Color('grey'),
-    shininess : 15 // 30 defaut value
+    shininess: 15 // 30 defaut value
   });
   return new THREE.Mesh(geometry, material);
-
 }
 
 function createCloud() {
@@ -110,9 +126,25 @@ function resize() {
 
 export function animate() {
   resize();
-  earthMesh.rotation.y += 0.001;
+  earthMesh.rotation.y += 0.01;//0.001
+  // dotMesh.rotation.y += 0.001;
   // cloudMesh.rotation.y +=0.001
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
 }
 
+function addObject() {
+  let geometry = new THREE.SphereBufferGeometry(0.3, 20, 20);
+  let material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+  return new THREE.Mesh(geometry, material);
+}
+
+function convertLatLongToCartesian(p) {
+  let radius = 8
+  let phi = ((p.lat) * (Math.PI / 180));
+  let theta = (-(p.long) * (Math.PI / 180));
+  let x = radius * Math.cos(theta) * Math.cos(phi);
+  let z = radius * Math.sin(theta) * Math.cos(phi);
+  let y = radius * Math.sin(phi);
+  return { x, y, z }
+}
