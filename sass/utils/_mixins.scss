@@ -17,7 +17,7 @@
   }
 }
 
-@mixin tablette-only {
+@mixin tablette {
   @media screen and(min-width: map-get($breakpoints, tablette)) {
     @content;
   }

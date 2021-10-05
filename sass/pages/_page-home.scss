@@ -46,7 +46,11 @@ body {
 .main-center{
     width:100%;
     height :auto;
-    padding :0 50px;
+    padding :0;
+    @include tablette{
+        padding: 0 30px;
+    }
+    
 background-color:$color-grey-light;
 }
 .main-center__header{
@@ -71,7 +75,11 @@ background-color:$color-grey-light;
      display: flex;
      flex-wrap: wrap;
      flex-direction:row;
-   justify-content:space-between;
+     justify-content:space-around;
+   /*   @include tablette{
+        justify-content:space-between;
+    } */
+  
     width:100%;
     height :auto;
     padding:50px 0;
