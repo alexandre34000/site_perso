@@ -14,6 +14,17 @@ const addListener = () =>{
   scrollTop.addEventListener("click", clickHandler);
 }
 
+const menu =document.getElementById("nav-icon");
+menu.addEventListener("click", toogleMenu);
+
+function toogleMenu(){
+    if(menu.dataset.open === "false"){
+    menu.dataset.open="true";
+    }
+    else{
+        menu.dataset.open="false";
+    }
+}
 
 addListener();
 init("#canvas", 25);
