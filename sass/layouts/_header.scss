@@ -10,12 +10,17 @@
 */
 
 .container-entete {
+  display :block;
   z-index: 5;
   position: fixed;
   width: 100vw;
   height: 60px;
   border-bottom: 2px solid $color-white;
   background-color: $color-grey-dark-light;
+  transition: transform 0.4s;
+}
+.container-entete[data-visible ="false"]{
+  transform :translateY(-70px);
 }
 .content-entete {
   display: flex;

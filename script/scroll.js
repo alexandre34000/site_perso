@@ -19,10 +19,12 @@
     const scrollUp = document.querySelector("#container-scrollTop");
     const containerEntete = document.querySelector('#screen-top')
     if(bol){
-      scrollUp.style.display = "flex"
-      containerEntete.style.display = "none"
+      scrollUp.dataset.visible ="true";
+     // scrollUp.style.display = "flex"
+      containerEntete.dataset.visible ="false"
     }else{
-      scrollUp.style.display = "none"
-      containerEntete.style.display = "block"
+     // scrollUp.style.display = "none"
+     scrollUp.dataset.visible ="false";
+      containerEntete.dataset.visible ="true"
     }
   }

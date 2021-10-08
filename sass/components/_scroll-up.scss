@@ -10,7 +10,31 @@ width :70px;
 border-radius: 50%;
 //border : 2px solid black;
 background-color:white;
+opacity: 0;
+transition :opacity 0.4s;
 }
 #scroll-top{
 
+}
+#container-scrollTop[data-visible ="true"]{
+   /*  display:flex;
+    opacity: 1; */
+    animation: fadeInFromNone 0.4s ease-out
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: flex;
+        opacity: 0;
+    }
+
+    100% {
+        display: flex;
+        opacity: 1;
+    }
 }
