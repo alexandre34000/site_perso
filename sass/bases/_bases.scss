@@ -6,6 +6,7 @@
    box-sizing: inherit; 
 }
 html{
+   min-width:375px;
     font-size:62.5%;
     @include mobile-landscape{
         font-size:75%;

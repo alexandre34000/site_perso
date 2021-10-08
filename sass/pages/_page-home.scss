@@ -1,104 +1,127 @@
 /**
-* _page-home.scss 1.0 avril 2021 by Alexandre CHARLIER  
+* _page-home.scss 1.0 septembre 2021 by Alexandre CHARLIER  
 *
 * Author : Alexandre CHARLIER.
 * GitHub : https://github.com/alexandre34000/AlexandreCharlier_3_02042021.
 * GitHub Pages : https://alexandre34000.github.io/AlexandreCharlier_3_02042021/.
-* Theme Name : ohmyfood .
+* Theme Name : Alexandre CHARLIER .
 * Description : StyleSheet de la page home.
-* Date: avril 2021. 
+* Date: septembre 2021. 
 */
-body {
-   // background-color :green;
+
+.main-container {
+  width: 100%;
+  height: auto;
+  // scroll-behavior: smooth;
 }
 
-.main-container{
-    width : 100%;
-    height: auto;
-    scroll-behavior: smooth;
- 
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../pictures/arch.jpg);
+  @include parallax;
+  @include tablette {
+    height: 700px;
+  }
 }
-.main-header{
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    width: 100%;
-    height : 700px;
-    background-image:url(../pictures/arch.jpg);
-    @include parallax;
+.header-template {
+  color: white;
+  align-self: center;
 }
-.header-template{
-    color: white;
-    align-self: center;
-}
-.main-header__title{
-    width: auto;
-    font-style: italic;
-    @extend .header-template;
+.main-header__title {
+  width: auto;
+  font-style: italic;
+  @extend .header-template;
 }
 
-.main-header__text{
-    width:50%;
-    @extend .header-template;
+.main-header__text {
+  width: 50%;
+  @extend .header-template;
 }
 
+.main-center {
+  width: 100%;
+  height: auto;
+ // padding: 0;
+  padding: 0 5%;
+  @include tablette {
+    padding: 0 4% ;
+  }
 
-.main-center{
-    width:100%;
-    height :auto;
-    padding :0;
-    @include tablette{
-        padding: 0 30px;
-    }
-    
-background-color:$color-grey-light;
+  background-color: $color-grey-light;
 }
-.main-center__header{
-    display:flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items:center;
-    padding-top:50px;
+.main-center__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 10px 0;
 }
-.main-center__header-border{
-    width:30%;
-    height:2px;
-    border-bottom:1px solid black;
+.main-center__header-border {
+width: 30%;
+  height: 2px;
+  border-bottom: 1px solid black;
 }
-.main-center__header-title{
-    padding:0 20px;
-    font-style: italic;
-    font-size:$font-mdbig;
-    font-family:$font-oblique;
+.main-center__header-title {
+ // padding: 0 20px;
+  font-style: italic;
+  font-size: $font-mdbig;
+  font-family: $font-oblique;
 }
-.main-center__center{
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction:row;
-     justify-content:space-around;
-   /*   @include tablette{
-        justify-content:space-between;
-    } */
+.main-center__center {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
   
-    width:100%;
-    height :auto;
-    padding:50px 0;
+  padding: 0 5%;
+  background-color: $color-grey-light;
+    @include tablette{
+        justify-content:space-around;
+        padding:0 4%;
+    }
 }
-.main-bottom{
-    
-    padding-top:70px;
-    height: 450px;
-    background-image:url(../pictures/museum.jpg);
-    @include parallax;
+.main-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70px;
+  height: 450px;
+  background-image: url(../pictures/museum.jpg);
+  @include parallax;
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    width: 95%;
+  }
 
-}
-.main-bottom-bottom{
-    height:300px;
-    background-color:$color-grey-dark-dark;
+  &__title {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-style: italic;
+    font-size: $font-exlg;
+    color: $color-white;
+  }
+  &__author {
+    grid-column: 2;
+    grid-row: 2;
+    color: $color-white;
+  }
 }
 
-.divcanvas{
-    width:100%;
-    height :100%;
-    background-image:url(../../dist/pictures/mapmonde/stars.jpg);
+.main-bottom-bottom {
+  height: 300px;
+  background-color: $color-grey-dark-dark;
+}
+
+.divcanvas {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../dist/pictures/mapmonde/stars.jpg);
 }

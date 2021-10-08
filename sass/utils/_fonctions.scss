@@ -5,3 +5,6 @@
 @function calc-gold-nb($value){
     @return $value * 1.618;
   }
+@function calc-gold-minus($value3){
+  @return $value3 / 1.618;
+}

@@ -2,13 +2,13 @@
 display: none;
 position :fixed;
 bottom : 50px;
-right :15px;
+right :18px;
 justify-content: center;
 align-items:center;
-height: 70px;
-width :70px;
+height: 65px;
+width :65px;
 border-radius: 50%;
-//border : 2px solid black;
+border : 5px solid $color-grey-dark-light;
 background-color:white;
 opacity: 0;
 transition :opacity 0.4s;
@@ -17,24 +17,18 @@ transition :opacity 0.4s;
 
 }
 #container-scrollTop[data-visible ="true"]{
-   /*  display:flex;
-    opacity: 1; */
-    animation: fadeInFromNone 0.4s ease-out
+    display:flex;
+    opacity: 0.7;
+    animation: fadeInFromNone 0.4s ease-out;
 }
 
 @keyframes fadeInFromNone {
     0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
         display: flex;
         opacity: 0;
     }
-
     100% {
         display: flex;
-        opacity: 1;
+        opacity: 0.7;
     }
 }

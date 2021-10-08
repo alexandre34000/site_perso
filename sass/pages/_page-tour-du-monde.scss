@@ -27,7 +27,6 @@ div{
     align-items:center;
     width: 100%;
     height : 700px;
-  //  background-image:url(../pictures/dublin-2344423_1920.jpg);
     @include parallax;
 }
 .divcanvas{
@@ -36,11 +35,7 @@ div{
     background-image:url(../../dist/pictures/mapmonde/stars.jpg);
  
 }
-/* #canvasmain{
-   display:block;
-    width: 100%;
-   height :100%;
-} */
+
 .header-template{
     color: white;
     align-self: center;

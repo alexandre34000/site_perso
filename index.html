@@ -15,9 +15,10 @@
     <link rel="icon" type="image/svg+xml" href="./dist/pictures/logo/" sizes="392x68" />
     <link rel="stylesheet" href="./dist/css/home-style.css" />
 </head>
+
 <body>
     <header>
-        <div class="container-entete" id="screen-top" data-visible = "true">
+        <div class="container-entete" id="screen-top" data-visible="true">
             <div class="content-entete">
                 <nav class="entete-left" aria-label="naviguer vers d'autres sections du site">
                     <ul class="entete-left__list">
@@ -50,7 +51,7 @@
                 <div class="main-center__header">
                     <div class="main-center__header-border"></div>
                     <h2 class="main-center__header-title" ">Découvrir</h2>
-                    <div class=" main-center__header-border">
+           <div class=" main-center__header-border"></div>         <!--  -->
                 </div>
             </div>
             <div class="main-center__center">
@@ -60,7 +61,7 @@
                     </div>
                     <div class="cards-bottom">
                         <p>Bien commencer</p>
-                        <a class="link-pos link-cards" href="/commencer.html">entrée</a>
+                        <a class="link-pos link-cards" href="commencer.html">entrée</a>
                     </div>
                 </div>
                 <div class="container-cards">
@@ -72,7 +73,7 @@
                         <!-- <img class="cards-img" src='./dist/pictures/dublin-2344423_1920.jpg' alt=""> -->
                     </div>
                     <div class="cards-bottom">
-                        <p>lOREUM IPSUM</p>
+                        <p>Tour du monde</p>
                         <a class="link-pos link-cards" href="tour-du-monde.html">Visite</a>
                     </div>
                 </div>
@@ -82,19 +83,23 @@
                     </div>
                     <div class="cards-bottom">
                         <p>loreum ipsum</p>
-                        <a class="link-pos link-cards" href="/commencer.html">loreum</a>
+                        <a class="link-pos link-cards" href="commencer.html">loreum</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="main-bottom">
-            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+            <div class="main-bottom-content">
+                <span class="main-bottom__title">"Les détails ne sont pas des détails, ils font la conception d'un
+                    produit"</span>
+                <span class="main-bottom__author">Bill Bernbach</span>
+            </div>
         </div>
         <div class="main-bottom-bottom">
-
+            <span>Une question, un avis ?</span>
+            <span>N'hesitez-pas</span>
+            <span>Cliquez button</span>
         </div>
-        </div>
-
     </main>
     <footer>
         <section class="footer-container">
@@ -109,7 +114,9 @@
             </div>
         </section>
     </footer>
-    <div id="container-scrollTop" data-visible= "false"><a id="scroll-top" href="#screen-top"><img src="dist/pictures/icons/drop_up.png"> </a></div>
+    <div id="container-scrollTop" data-visible = "false"><a id="scroll-top" href="#screen-top"><img
+                src="dist/pictures/icons/drop_up.png"> </a>
+    </div>
     <script type="module" src="index.js"></script>
 </body>
 
