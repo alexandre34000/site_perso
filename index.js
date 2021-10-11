@@ -1,11 +1,15 @@
 
 import {init, animate} from './script/map-monde.js'
 import {clickHandler, isActive} from './script/scroll.js'
+import Menu from './script/header.js'
+
 const links = document.querySelectorAll(".content-entete ul a");
 const scrollTop = document.querySelector("#scroll-top");
 
+new Menu();
+
 /**
-* add Event listener on domElements
+* add Event listener on DOMElements
 */
 const addListener = () =>{
   for (const link of links) {
@@ -14,7 +18,10 @@ const addListener = () =>{
   scrollTop.addEventListener("click", clickHandler);
 }
 
-const menu =document.getElementById("nav-icon");
+
+
+//toto.init();
+/* const menu =document.getElementById("nav-icon");
 menu.addEventListener("click", toogleMenu);
 
 function toogleMenu(){
@@ -24,7 +31,7 @@ function toogleMenu(){
     else{
         menu.dataset.open="false";
     }
-}
+} */
 
 addListener();
 init("#canvas", 25);

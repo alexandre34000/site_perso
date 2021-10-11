@@ -8,13 +8,14 @@
 * Description : Stylesheet du header.
 * Date: Août 2021. 
 */
+$heigthRow1: 65px;
 
 .container-entete {
   display: block;
   z-index: 5;
   position: fixed;
-  width: 100vw;
-  height: 60px;
+  width: 100%;
+  height: 70px;
   border-bottom: 2px solid $color-white;
   background-color: $color-grey-dark-light;
   transition: transform 0.4s;
@@ -22,6 +23,7 @@
 .container-entete[data-visible="false"] {
   transform: translateY(-70px);
 }
+/*
 .content-entete {
   display: flex;
   width: 100%;
@@ -29,7 +31,7 @@
   border-bottom: 1px solid $color-white;
 }
 
-%entete {
+ %entete {
   display: flex;
   align-items: center;
   width: 42%;
@@ -48,24 +50,26 @@
 }
 
 .entete-center {
+  display: flex;
   width: 15%;
   height: 100%;
-  padding: 10px 10px;
-  border-left: 1px solid $color-white;
-  border-right: 1px solid $color-white;
-  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 10px;
   &__logo {
     font-size: $font-mdbig;
     font-family: $font-logo;
     color: $color-white;
   }
+  @include tablette {
+    border-left: 1px solid $color-white;
+    border-right: 1px solid $color-white;
+  }
 }
 
 .entete-right {
   display: none;
-  @include tablette {
+  @include mobile-landscape {
     display: flex;
     align-items: center;
     width: 42%;
@@ -82,10 +86,115 @@
 .entete-right__mobile {
   @extend %entete;
   justify-content: flex-end;
-  @include tablette {
+  @include mobile-landscape {
+    display: none;
+  }
+} */
+
+//debut
+
+.content-entete {
+  display: grid;
+  grid-template-columns: 0 auto 60px;
+  grid-template-rows: $heigthRow1 auto;
+  @include mobile-landscape {
+    grid-template-columns: 40% 20% 40%;
+  }
+}
+
+.entete-left{
+ // display: none;
+  display: flex;
+  grid-column: 2 / 4;
+  grid-row: 2;
+  justify-self: end;
+  justify-content: left;
+  height: 100%;
+  width: 200px;
+  background-color: grey;
+  @include mobile-landscape {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid $color-white;
+  }
+}
+.entete-left[data-toogle='false']{
+  
+  transform: translateX(200px);
+}
+.entete-left[data-toogle='true']{
+  transition: 0.4s ease-in-out;
+}
+
+.entete-left__list li {
+  display:block;
+  padding:20px 0 20px 20px;
+ // text-align:right;
+  @include mobile-landscape {
+  display: inline;
+  padding: 0 30px;
+  }
+}
+
+.entete-center {
+  grid-column: 2;
+  grid-row: 1;
+  border-bottom: 1px solid $color-white;
+  &__logo {
+    margin-left :30px;
+    text-align: center;
+    font-size: $font-mdbig;
+    font-family: $font-logo;
+    color: $color-white;
+    vertical-align: middle;
+    @include mobile-landscape{
+      margin-left:0;
+    }
+  }
+  @include mobile-landscape {
+    border-left: 1px solid $color-white;
+    border-right: 1px solid $color-white;
+  }
+}
+
+.entete-right {
+  display: none;
+  @include mobile-landscape {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    grid-column: 3;
+    grid-row: 1;
+    justify-content: end;
+    align-items: center;
+    border-bottom: 1px solid $color-white;
+    &__list {
+      & > li {
+        display: inline;
+        padding: 0 30px;
+      }
+    }
+  }
+}
+.entete-right__mobile {
+  display: flex;
+  grid-column: 3;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid $color-white;
+  @include mobile-landscape {
     display: none;
   }
 }
+
+// fin
 
 #nav-icon {
   width: 40px;
