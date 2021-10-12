@@ -23,75 +23,6 @@ $heigthRow1: 65px;
 .container-entete[data-visible="false"] {
   transform: translateY(-70px);
 }
-/*
-.content-entete {
-  display: flex;
-  width: 100%;
-  height: 95%;
-  border-bottom: 1px solid $color-white;
-}
-
- %entete {
-  display: flex;
-  align-items: center;
-  width: 42%;
-  height: 100%;
-}
-
-.entete-left {
-  @extend %entete;
-  justify-content: flex-start;
-  &__list {
-    & > li {
-      display: inline;
-      padding: 0 30px;
-    }
-  }
-}
-
-.entete-center {
-  display: flex;
-  width: 15%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 10px;
-  &__logo {
-    font-size: $font-mdbig;
-    font-family: $font-logo;
-    color: $color-white;
-  }
-  @include tablette {
-    border-left: 1px solid $color-white;
-    border-right: 1px solid $color-white;
-  }
-}
-
-.entete-right {
-  display: none;
-  @include mobile-landscape {
-    display: flex;
-    align-items: center;
-    width: 42%;
-    height: 100%;
-    justify-content: flex-end;
-    & > ul {
-      & > li {
-        display: inline;
-        padding: 0 30px;
-      }
-    }
-  }
-}
-.entete-right__mobile {
-  @extend %entete;
-  justify-content: flex-end;
-  @include mobile-landscape {
-    display: none;
-  }
-} */
-
-//debut
 
 .content-entete {
   display: grid;
@@ -102,41 +33,68 @@ $heigthRow1: 65px;
   }
 }
 
-.entete-left{
- // display: none;
+.entete-left {
   display: flex;
   grid-column: 2 / 4;
   grid-row: 2;
   justify-self: end;
   justify-content: left;
   height: 100%;
+  transform: translateX(200px);
   width: 200px;
   background-color: grey;
   @include mobile-landscape {
-    display: flex;
-    grid-column: 1;
+    grid-column: 1/2;
     grid-row: 1;
-    justify-content: start;
+    justify-self: start;
+    justify-content: left;
     align-items: center;
     width: 100%;
     border-bottom: 1px solid $color-white;
+    transform: translateX(0px);
+    background-color: transparent;
   }
 }
-.entete-left[data-toogle='false']{
-  
-  transform: translateX(200px);
+.entete-left[data-toogle="close"] {
+  animation-name: toogle-menu-close;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  @include mobile-landscape {
+    animation-name: toogle-menu-open;
+    animation-duration: 0s;
+  }
 }
-.entete-left[data-toogle='true']{
-  transition: 0.4s ease-in-out;
+.entete-left[data-toogle="open"] {
+  animation-name: toogle-menu-open;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes toogle-menu-open {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes toogle-menu-close {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
 }
 
 .entete-left__list li {
-  display:block;
-  padding:20px 0 20px 20px;
- // text-align:right;
+  display: block;
+  padding: 20px 0 20px 20px;
   @include mobile-landscape {
-  display: inline;
-  padding: 0 30px;
+    display: inline;
+    padding: 0 30px;
   }
 }
 
@@ -145,14 +103,14 @@ $heigthRow1: 65px;
   grid-row: 1;
   border-bottom: 1px solid $color-white;
   &__logo {
-    margin-left :30px;
+    margin-left: 30px;
     text-align: center;
     font-size: $font-mdbig;
     font-family: $font-logo;
     color: $color-white;
     vertical-align: middle;
-    @include mobile-landscape{
-      margin-left:0;
+    @include mobile-landscape {
+      margin-left: 0;
     }
   }
   @include mobile-landscape {
