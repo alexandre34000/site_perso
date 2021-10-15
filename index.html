@@ -20,11 +20,11 @@
     <header>
         <div class="container-entete" id="screen-top" data-visible="true">
             <div class="content-entete">
-                <nav class="entete-left" id="toogleMenu"  aria-label="naviguer vers d'autres sections du site">
+                <nav class="entete-left" id="toogleMenu" aria-label="naviguer vers d'autres sections du site">
                     <ul class="entete-left__list">
                         <li><a class="link-header" href="#decouvrir">Découvrir</a></li>
-                        <li><a class="link-header" href="#">loreum</a></li>
-                       <!--  <li><a class="link-header" href="#">loreum</a></li> -->
+                        <li><a class="link-header" href="#main-bottom-faq">Aide</a></li>
+                        <!--  <li><a class="link-header" href="#">loreum</a></li> -->
                     </ul>
                 </nav>
                 <div class="entete-center">
@@ -50,64 +50,62 @@
     <main>
         <div class="main-container">
             <div class="main-header">
-                <h1 class="main-header__title">Lorem Ipsum </h1>
-                <p class="main-header__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                <h1 class="main-header__title">Réaliser un site internet </h1>
+                <p class="main-header__text">En quelques minutes ou un peu plus...</p>
                 <a class="main-header__link">Visiter</a>
             </div>
             <div class="main-center" id="decouvrir">
                 <div class="main-center__header">
                     <div class="main-center__header-border"></div>
-                    <h2 class="main-center__header-title" ">Découvrir</h2>
-           <div class=" main-center__header-border">
-                </div> <!--  -->
-            </div>
-        </div>
-        <div class="main-center__center">
-            <div class="container-cards">
-                <div class="cards-header">
-                    <img class="cards-img" src='./dist/pictures/libray.jpg' alt="">
-                </div>
-                <div class="cards-bottom">
-                    <p>Bien commencer</p>
-                    <a class="link-pos link-cards" href="commencer.html">entrée</a>
+                    <h2 class="main-center__header-title">Découvrir</h2>
+                    <div class=" main-center__header-border"></div>
                 </div>
             </div>
-            <div class="container-cards">
-                <div class="cards-header">
-                    <div class="divcanvas">
-                        <canvas id="canvas" width="300" height="150"></canvas>
+            <div class="main-center__center">
+                <div class="container-cards">
+                    <div class="cards-header">
+                        <img class="cards-img" src='./dist/pictures/libray.jpg' alt="">
                     </div>
+                    <div class="cards-bottom">
+                        <p>Bien commencer</p>
+                        <a class="link-pos link-cards" href="commencer.html">Entrée</a>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="cards-header">
+                        <div class="divcanvas">
+                            <canvas id="canvas" width="300" height="150"></canvas>
+                        </div>
 
-                    <!-- <img class="cards-img" src='./dist/pictures/dublin-2344423_1920.jpg' alt=""> -->
+                        <!-- <img class="cards-img" src='./dist/pictures/dublin-2344423_1920.jpg' alt=""> -->
+                    </div>
+                    <div class="cards-bottom">
+                        <p>Tour du monde</p>
+                        <a class="link-pos link-cards" href="tour-du-monde.html">Visiter</a>
+                    </div>
                 </div>
-                <div class="cards-bottom">
-                    <p>Tour du monde</p>
-                    <a class="link-pos link-cards" href="tour-du-monde.html">Visite</a>
+                <div class="container-cards">
+                    <div class="cards-header">
+                        <img class="cards-img" src='./dist/pictures/bridge.jpg' alt="">
+                    </div>
+                    <div class="cards-bottom">
+                        <p>Réaliser</p>
+                        <a class="link-pos link-cards" href="commencer.html">Entrée</a>
+                    </div>
                 </div>
             </div>
-            <div class="container-cards">
-                <div class="cards-header">
-                    <img class="cards-img" src='./dist/pictures/library-5902990_1920.jpg' alt="">
-                </div>
-                <div class="cards-bottom">
-                    <p>loreum ipsum</p>
-                    <a class="link-pos link-cards" href="commencer.html">loreum</a>
+            <div class="main-bottom">
+                <div class="main-bottom-content">
+                    <span class="main-bottom__title">"Les détails ne sont pas des détails, ils font la conception d'un
+                        produit"</span>
+                    <span class="main-bottom__author">Bill Bernbach</span>
                 </div>
             </div>
-        </div>
-        </div>
-        <div class="main-bottom">
-            <div class="main-bottom-content">
-                <span class="main-bottom__title">"Les détails ne sont pas des détails, ils font la conception d'un
-                    produit"</span>
-                <span class="main-bottom__author">Bill Bernbach</span>
+            <div class="main-bottom-bottom" id="main-bottom-faq">
+                <span>Une question, un avis ?</span>
+                <span>N'hesitez-pas</span>
+                <span>Cliquez button</span>
             </div>
-        </div>
-        <div class="main-bottom-bottom">
-            <span>Une question, un avis ?</span>
-            <span>N'hesitez-pas</span>
-            <span>Cliquez button</span>
         </div>
     </main>
     <footer>
@@ -124,7 +122,7 @@
         </section>
     </footer>
     <div id="container-scrollTop" data-visible="false"><a id="scroll-top" href="#screen-top"><img
-                src="dist/pictures/icons/drop_up.png"> </a>
+                src="dist/pictures/icons/drop_up.png" alt=""> </a>
     </div>
     <script type="module" src="index.js"></script>
 </body>

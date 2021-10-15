@@ -9,24 +9,35 @@
     color: white;
 }
 .main-header__link{
-    width:80px;
-    border : 1px solid white;
+    position: absolute;
+    bottom: 50px;
+    width:200px;
+    height:50px;
+    border : 1.5px solid white;
+    border-radius: 20px;
     text-align: center;
     color: white;
     align-self: center;
     cursor: pointer;
+    line-height: 47px;
+    font-size: $font-exlg;
+    background-color: $color-grey70;
   //  @extend .header-template;
 }
 
 .link-cards{
-    width:90px;
-    height:30px;
-    background-color: transparent;
+    width:150px;
+    height:50px;
+   // background-color: transparent;
+   background-color: $color-grey70;
     text-align: center;
-    line-height :30px;
+    line-height :46px;
     color:white;
-    border: 1px solid $color-white;
-    border-radius:3px;
+    border: 1.5px solid $color-white;
+    border-radius:15px;
     cursor: pointer;
+   // box-shadow: 1px 1px 1px white;
+        font-size: 22px;
+    
 }
 

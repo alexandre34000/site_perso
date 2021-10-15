@@ -37,10 +37,13 @@ addListener();
 init("#canvas", 25);
 animate();
 
+
 let oldValue =0;
 window.addEventListener('scroll', function(e){
 var newValue = window.pageYOffset || document.documentElement.scrollTop;
   if(newValue > oldValue){
+      
+   
     isActive(true)
 } else if(newValue < oldValue){
     isActive(false)
@@ -48,6 +51,12 @@ var newValue = window.pageYOffset || document.documentElement.scrollTop;
 oldValue = newValue <= 0 ? 0 : newValue;
 }, false);
 
+const el = document.querySelector('#decouvrir');
+
+console.log(el.scrollLeft+" , "+el.scrollTop);
+/* var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+var scrollTop=    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+console.log(scrollLeft,scrollTop); */
 
 /**
 *

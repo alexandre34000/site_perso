@@ -18,6 +18,7 @@ export function init(getId, posCamera) {
 
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(70, 1, 1, 1000);
+  console.log(posCamera)
   camera.position.set(0, 0, posCamera)//25
   
 
