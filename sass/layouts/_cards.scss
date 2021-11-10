@@ -38,9 +38,13 @@ $width: 350px;
     font-family: $font-oblique;
     font-size: $font-mdbig;
     position: absolute;
-    top: 10%;
+    top: 22%;
     // text-align :center;
     color: white;
+    padding: 0 20px 0 20px;
+    background-color: $color-grey70;
+    border-radius: 50px;
+    
   }
   .link-pos {
     position: absolute;

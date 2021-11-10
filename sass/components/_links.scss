@@ -1,43 +1,36 @@
-
-/* .header-template{
-    color: white;
-    align-self: center;
-    cursor: pointer;
-   
-} */
-.link-header{
-    color: white;
+.link-header {
+  color: white;
 }
-.main-header__link{
-    position: absolute;
-    bottom: 50px;
-    width:200px;
-    height:50px;
-    border : 1.5px solid white;
-    border-radius: 20px;
-    text-align: center;
-    color: white;
-    align-self: center;
-    cursor: pointer;
-    line-height: 47px;
-    font-size: $font-exlg;
-    background-color: $color-grey70;
-  //  @extend .header-template;
+.main-header__link {
+  position: absolute;
+  bottom: 20%;
+  width: 250px;
+  height: 48px;
+  border: 1.8px solid white;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  align-self: center;
+  cursor: pointer;
+  line-height: 46px;
+  font-size: $font-exlg;
+ // background-color: $color-grey70;
 }
 
-.link-cards{
-    width:150px;
-    height:50px;
-   // background-color: transparent;
-   background-color: $color-grey70;
-    text-align: center;
-    line-height :46px;
-    color:white;
-    border: 1.5px solid $color-white;
-    border-radius:15px;
-    cursor: pointer;
-   // box-shadow: 1px 1px 1px white;
-        font-size: 22px;
-    
+.link-cards {
+  width: 180px;
+  height: 45px;
+  background-color: $color-grey70;
+  text-align: center;
+  line-height: 43px;
+  color: white;
+  border: 1.3px solid $color-white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 22px;
 }
 
+.link-question{
+  background-color: $color-white;
+  color:black;
+}
